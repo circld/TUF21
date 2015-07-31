@@ -44,7 +44,7 @@ episode.win <- function(scores) {
 ep.inc <- replicate(n, episode.win(increasing.scores))
 ep.lvl <- replicate(n, episode.win(level.scores))
 
-cat("\nEariest episode a team wins, on average, with incremental scoring: ",
+cat("\nEarliest episode a team wins, on average, with incremental scoring: ",
     sum(ep.inc, na.rm = TRUE) / length(na.exclude(ep.inc)), "\n")
-cat("\nEariest episode a team wins, on average, with even scoring: ",
+cat("\nEarliest episode a team wins, on average, with even scoring: ",
     sum(ep.lvl, na.rm = TRUE) / length(na.exclude(ep.lvl)), "\n")
